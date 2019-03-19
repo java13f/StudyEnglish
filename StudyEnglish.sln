@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyEnglish", "StudyEnglish\StudyEnglish.csproj", "{A88BA6EB-D0E5-47BB-AE3D-F4EE47B98ACD}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup2", "Setup2\Setup2.vdproj", "{2C7776FA-C0DE-4EC3-A2F3-19985E23F81E}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupStudyEnglish", "SetupStudyEnglish\SetupStudyEnglish.vdproj", "{CE47E761-E159-4680-8AD3-B931E31351C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{A88BA6EB-D0E5-47BB-AE3D-F4EE47B98ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A88BA6EB-D0E5-47BB-AE3D-F4EE47B98ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A88BA6EB-D0E5-47BB-AE3D-F4EE47B98ACD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C7776FA-C0DE-4EC3-A2F3-19985E23F81E}.Debug|Any CPU.ActiveCfg = Debug
-		{2C7776FA-C0DE-4EC3-A2F3-19985E23F81E}.Release|Any CPU.ActiveCfg = Release
+		{CE47E761-E159-4680-8AD3-B931E31351C0}.Debug|Any CPU.ActiveCfg = Debug
+		{CE47E761-E159-4680-8AD3-B931E31351C0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
