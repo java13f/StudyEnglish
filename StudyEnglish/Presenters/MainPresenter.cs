@@ -1,5 +1,6 @@
 ﻿
-using StudyEnglish.Models;
+
+using StudyEnglish.BL.Controller;
 using StudyEnglish.Views;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace StudyEnglish.Presenters
     public class MainPresenter
     {
         private readonly IMainForm _view;
-        private readonly IMainModel _model;
+        private readonly IEditExpression _editExpression;
         private readonly MessageService _message;
 
         private List<List<string>> _listExpression;
@@ -21,10 +22,10 @@ namespace StudyEnglish.Presenters
         private List<int> _indexListПройденныхВыражений;
 
                 
-        public MainPresenter(IMainForm view, IMainModel model)
+        public MainPresenter(IMainForm view, IEditExpression editExpression)
         {
             _view = view;
-            _model = model;
+            _editExpression = editExpression;
             _message = new MessageService();
 
             _indexListПройденныхВыражений = new List<int>();
@@ -80,11 +81,11 @@ namespace StudyEnglish.Presenters
 
             _view.ПоказатьОднуВкладку(1);
             _view.TabControlMainVisible = true;
-            _view.DgvRuleDataSource = _model.GetTableRule();
+            _view.DgvRuleDataSource = _editExpression.GetTableRule();
 
             _view.CmbLessonValueMember = "idLesson";            
             _view.CmbLessonDisplayMember = "Lesson";
-            _view.CmbLessonDataSource = _model.GetTableLessons(true);
+            _view.CmbLessonDataSource = _editExpression.GetTableLessons(true);
 
             _view.CmbLessonSelectedIndex = -1;            
         }
@@ -95,17 +96,17 @@ namespace StudyEnglish.Presenters
 
             _view.ПоказатьОднуВкладку(2);
             _view.TabControlMainVisible = true;
-            _view.DgvRuleDataSource = _model.GetTableRule();
+            _view.DgvRuleDataSource = _editExpression.GetTableRule();
             _view.SetFocusedEnglishTranslate();
 
-            _listExpression = _model.GetListExpression();
+            _listExpression = _editExpression.GetListExpression();
             _view.NumExpression = _listExpression[0].Count;
 
             ViewRandomExpression();
             
             _view.CmbLessonTestValueMember = "idLesson";
             _view.CmbLessonTestDisplayMember = "Lesson";            
-            _view.CmbLessonTestDataSource = _model.GetTableLessons();
+            _view.CmbLessonTestDataSource = _editExpression.GetTableLessons();
 
             _view.CmbLessonTestSelectedIndex = -1;            
         }
@@ -187,8 +188,8 @@ namespace StudyEnglish.Presenters
             else
             {               
                 FormAllExpression frmAllExpression = new FormAllExpression();
-                IAllExpressionModel expressionModel = new MainModel();
-                AllExpressionPresenter presenter = new AllExpressionPresenter(frmAllExpression, expressionModel);
+                IAllExpression allExpression = new ExpressionManager(Authorize.OleDbConStr);
+                AllExpressionPresenter presenterAllExpression = new AllExpressionPresenter(frmAllExpression, allExpression);
                 frmAllExpression.Name = "AllExpression";
                 frmAllExpression.Show();
             }                                                   
@@ -225,7 +226,7 @@ namespace StudyEnglish.Presenters
         
         private void _view_btnCheckClick(object sender, EventArgs e)
         {            
-            if (!_model.CompareExpression(_listExpression, _indexList, _view.EnglishTranslate))
+            if (!_editExpression.CompareExpression(_listExpression, _indexList, _view.EnglishTranslate))
             {
                 _message.ShowExclamation("Ошибка перевода");
                 _view.NumError++;
@@ -238,7 +239,7 @@ namespace StudyEnglish.Presenters
             while (true)
             {
                 _view.EnglishTranslate = "";
-                string[] expressionRussian = _model.RandomExpression(_listExpression).Split(',');
+                string[] expressionRussian = _editExpression.RandomExpression(_listExpression).Split(',');
 
                 _indexList = Convert.ToInt32(expressionRussian[0]);
                                 
@@ -268,8 +269,8 @@ namespace StudyEnglish.Presenters
             string lesson = _view.CmbLessonTestText;
 
             if (lesson == "Все уроки")
-               _listExpression = _model.GetListExpression();
-            else _listExpression = _model.GetListExpression(lesson);
+               _listExpression = _editExpression.GetListExpression();
+            else _listExpression = _editExpression.GetListExpression(lesson);
 
             _view.NumExpression = _listExpression[0].Count;
             ViewRandomExpression();
@@ -279,7 +280,7 @@ namespace StudyEnglish.Presenters
 
         private void ViewRandomExpression()
         {
-            string[] expressionRussian = _model.RandomExpression(_listExpression).Split(',');
+            string[] expressionRussian = _editExpression.RandomExpression(_listExpression).Split(',');
 
             _indexList = Convert.ToInt32(expressionRussian[0]);
             _view.RussianTest = expressionRussian[1];
@@ -305,7 +306,7 @@ namespace StudyEnglish.Presenters
 
             try
             {
-                _model.AddNewExpression(_view.ExpressionEngText, _view.ExpressionRusText, _view.IdRule, _view.CmbLessonSelectedValue);
+                _editExpression.AddNewExpression(_view.ExpressionEngText, _view.ExpressionRusText, _view.IdRule, _view.CmbLessonSelectedValue);
                 _message.ShowMessage("Выполнено!");
             }
             catch (Exception ex)

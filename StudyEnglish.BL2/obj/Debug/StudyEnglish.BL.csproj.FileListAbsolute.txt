@@ -1,0 +1,6 @@
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL2\obj\Debug\StudyEnglish.BL.csprojAssemblyReference.cache
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL2\obj\Debug\StudyEnglish.BL.csproj.CoreCompileInputs.cache
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL2\bin\Debug\StudyEnglish.BL2.dll
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL2\bin\Debug\StudyEnglish.BL2.pdb
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL2\obj\Debug\StudyEnglish.BL2.dll
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL2\obj\Debug\StudyEnglish.BL2.pdb

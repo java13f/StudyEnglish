@@ -1,4 +1,4 @@
-﻿using StudyEnglish.Models;
+﻿using StudyEnglish.BL.Controller;
 using StudyEnglish.Presenters;
 using System;
 using System.Windows.Forms;
@@ -17,8 +17,8 @@ namespace StudyEnglish
             Application.SetCompatibleTextRenderingDefault(false);
 
             FormMain mainForm = new FormMain();
-            IMainModel model = new MainModel();
-            MainPresenter presenter = new MainPresenter(mainForm, model);
+            IEditExpression editExpression = new ExpressionManager(Authorize.OleDbConStr);
+            MainPresenter presenter = new MainPresenter(mainForm, editExpression);
             
             Application.Run(mainForm);
         }

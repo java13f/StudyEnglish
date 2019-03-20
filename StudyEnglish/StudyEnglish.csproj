@@ -67,8 +67,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="MessageService.cs" />
-    <Compile Include="Models\MainModel.cs" />
-    <Compile Include="OleDbHelper.cs" />
     <Compile Include="Presenters\AllExpressionPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Views\FormAllExpression.cs">
@@ -140,6 +138,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudyEnglish.BL2\StudyEnglish.BL.csproj">
+      <Project>{f90dd5f0-6c45-47a7-b3eb-8fde7f69caca}</Project>
+      <Name>StudyEnglish.BL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

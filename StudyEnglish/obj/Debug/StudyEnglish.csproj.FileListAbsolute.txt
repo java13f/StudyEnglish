@@ -24,3 +24,6 @@ d:\WorkFolder\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПР�
 d:\WorkFolder\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.Views.FormTimes.resources
 d:\WorkFolder\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.FormMain.resources
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.csprojAssemblyReference.cache
+d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\bin\Debug\StudyEnglish.BL2.dll
+d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\bin\Debug\StudyEnglish.BL2.pdb
+d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.csproj.CopyComplete

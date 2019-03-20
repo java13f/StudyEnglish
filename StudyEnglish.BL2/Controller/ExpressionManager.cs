@@ -4,9 +4,9 @@ using System.Data;
 using System.Data.OleDb;
 
 
-namespace StudyEnglish.Models
+namespace StudyEnglish.BL.Controller
 {
-    public interface IMainModel
+    public interface IEditExpression
     {
         DataTable GetTableRule();
         DataTable GetTableLessons(bool условие = false);
@@ -17,22 +17,28 @@ namespace StudyEnglish.Models
         bool CompareExpression(List<List<string>> listExpression, int indexList, string engleashTrasnlate);
     }
 
-    public interface IAllExpressionModel
+    public interface IAllExpression
     {
         DataTable GetAllExpression();
     }
 
-    public class MainModel : OleDbHelper, IMainModel, IAllExpressionModel
+    public class ExpressionManager : OleDbHelper, IEditExpression, IAllExpression
     {
+        private readonly string OleDbConStr;
 
-        #region IMainModel
+        #region IEditExpression
+        public ExpressionManager(string oleDbConStr)
+        {
+            OleDbConStr = oleDbConStr;
+        }
+
         public void AddNewExpression(string ExpEng, string ExpRus, string idRule, string idLesson)
         {
             
             string query = "INSERT INTO tbExpression(ExpressionEng, ExpressionRus, idRule, idLesson) " +
                 "VALUES('" + ExpEng + "', '" + ExpRus + "', '" + idRule + "', '"+idLesson+"')";
                         
-            ExecuteNonQuery(Authorize.OleDbConStr, query);
+            ExecuteNonQuery(OleDbConStr, query);
         }
 
         public DataTable GetTableRule()
@@ -43,7 +49,7 @@ namespace StudyEnglish.Models
                 "FROM tbRule " +
                 "ORDER BY idRule DESC";
 
-            tableRule.Load(ExecuteReader(Authorize.OleDbConStr, query));
+            tableRule.Load(ExecuteReader(OleDbConStr, query));
 
             return tableRule;
         }
@@ -62,7 +68,7 @@ namespace StudyEnglish.Models
 
             query += sort;            
 
-            tableLesson.Load(ExecuteReader(Authorize.OleDbConStr, query));
+            tableLesson.Load(ExecuteReader(OleDbConStr, query));
 
             return tableLesson;
         }
@@ -70,7 +76,7 @@ namespace StudyEnglish.Models
         public List<List<string>> GetListExpression()
         {
             string query = "SELECT ExpressionEng, ExpressionRus FROM tbExpression";
-            OleDbDataReader reader = ExecuteReader(Authorize.OleDbConStr, query);
+            OleDbDataReader reader = ExecuteReader(OleDbConStr, query);
 
             List<string> listExpEng = new List<string>();
             List<string> listExpRus = new List<string>();
@@ -94,7 +100,7 @@ namespace StudyEnglish.Models
                 "FROM tbExpression e " +
                 "inner join tbLesson les on les.idLesson = e.idLesson " +
                 "WHERE Lesson='"+lesson+"' ";
-            OleDbDataReader reader = ExecuteReader(Authorize.OleDbConStr, query);
+            OleDbDataReader reader = ExecuteReader(OleDbConStr, query);
 
             List<string> listExpEng = new List<string>();
             List<string> listExpRus = new List<string>();
@@ -137,17 +143,12 @@ namespace StudyEnglish.Models
             else
                 return false;
         }
-
-        
-
-        
-
-
+                    
         #endregion
 
 
 
-        #region IAllExpressionModel
+        #region IAllExpression
         public DataTable GetAllExpression()
         {
             DataTable tableExpression = new DataTable();
@@ -157,7 +158,7 @@ namespace StudyEnglish.Models
                 "inner join tbRule r on r.idRule = e.idRule) " +
                 "inner join tbLesson les on les.idLesson = e.idLesson " +
                 "ORDER BY e.idLesson";
-            tableExpression.Load(ExecuteReader(Authorize.OleDbConStr, query));
+            tableExpression.Load(ExecuteReader(OleDbConStr, query));
 
             return tableExpression;
         }

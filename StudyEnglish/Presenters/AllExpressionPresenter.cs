@@ -1,4 +1,4 @@
-﻿using StudyEnglish.Models;
+﻿using StudyEnglish.BL.Controller;
 using StudyEnglish.Views;
 using System.Data;
 
@@ -7,12 +7,12 @@ namespace StudyEnglish.Presenters
     public class AllExpressionPresenter
     {
         IFormAllExpression _view;
-        IAllExpressionModel _model;
+        IAllExpression _expressionController;
 
-        public AllExpressionPresenter(IFormAllExpression view, IAllExpressionModel model)
+        public AllExpressionPresenter(IFormAllExpression view, IAllExpression expressionController)
         {
             _view = view;
-            _model = model;
+            _expressionController = expressionController;
 
             _view.FormLoad += _view_FormLoad;
             _view.BtnCloseFormClick += _view_btnCloseFormClick;
@@ -22,7 +22,7 @@ namespace StudyEnglish.Presenters
 
         private void _view_FormLoad(object sender, System.EventArgs e)
         {
-            DataTable tableExpression = _model.GetAllExpression();
+            DataTable tableExpression = _expressionController.GetAllExpression();
             _view.DgvExpressionDataSource = tableExpression;
             _view.LblCountRec = tableExpression.Rows.Count.ToString();
         }
