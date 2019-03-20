@@ -69,7 +69,7 @@
             this.btnMinimize.Size = new System.Drawing.Size(32, 33);
             this.btnMinimize.TabIndex = 5;
             this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // btnMaximize
             // 
@@ -82,7 +82,7 @@
             this.btnMaximize.Size = new System.Drawing.Size(32, 33);
             this.btnMaximize.TabIndex = 6;
             this.btnMaximize.UseVisualStyleBackColor = true;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            this.btnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click);
             // 
             // btnCloseForm
             // 
@@ -95,7 +95,7 @@
             this.btnCloseForm.Size = new System.Drawing.Size(30, 33);
             this.btnCloseForm.TabIndex = 4;
             this.btnCloseForm.UseVisualStyleBackColor = true;
-            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
+            this.btnCloseForm.Click += new System.EventHandler(this.BtnCloseForm_Click);
             // 
             // picBoxIco
             // 

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudyEnglish.Views
@@ -17,12 +11,12 @@ namespace StudyEnglish.Views
         void MaximizeForm();
 
         DataTable DgvExpressionDataSource { set; }
-        string lblCountRec { set; }
+        string LblCountRec { set; }
 
         event EventHandler FormLoad;
-        event EventHandler btnCloseFormClick;
-        event EventHandler btnMinimizeClick;
-        event EventHandler btnMaximizeClick;
+        event EventHandler BtnCloseFormClick;
+        event EventHandler BtnMinimizeClick;
+        event EventHandler BtnMaximizeClick;
     }
 
 
@@ -47,22 +41,22 @@ namespace StudyEnglish.Views
 
         private void FormAllExpression_Load(object sender, EventArgs e)
         {
-            if (FormLoad != null) FormLoad(this, EventArgs.Empty);            
+            FormLoad?.Invoke(this, EventArgs.Empty);            
         }
 
         private void BtnMaximize_Click(object sender, EventArgs e)
         {
-            if (btnMaximizeClick != null) btnMaximizeClick(this, EventArgs.Empty);            
+            BtnMaximizeClick?.Invoke(this, EventArgs.Empty);            
         }
 
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
-            if (btnMinimizeClick != null) btnMinimizeClick(this, EventArgs.Empty);                        
+            BtnMinimizeClick?.Invoke(this, EventArgs.Empty);                        
         }
 
         private void BtnCloseForm_Click(object sender, EventArgs e)
         {
-            if (btnCloseFormClick != null) btnCloseFormClick(this, EventArgs.Empty);           
+            BtnCloseFormClick?.Invoke(this, EventArgs.Empty);           
         }
         #endregion
 
@@ -86,11 +80,11 @@ namespace StudyEnglish.Views
         }
 
         public DataTable DgvExpressionDataSource { set => dgvExpression.DataSource = value; }
-        public string lblCountRec { set => lblCount.Text = value; }
+        public string LblCountRec { set => lblCount.Text = value; }
 
-        public event EventHandler btnCloseFormClick;
-        public event EventHandler btnMinimizeClick;
-        public event EventHandler btnMaximizeClick;
+        public event EventHandler BtnCloseFormClick;
+        public event EventHandler BtnMinimizeClick;
+        public event EventHandler BtnMaximizeClick;
         public event EventHandler FormLoad;
         #endregion
 

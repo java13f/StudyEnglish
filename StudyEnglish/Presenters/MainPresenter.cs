@@ -28,33 +28,32 @@ namespace StudyEnglish.Presenters
             _message = new MessageService();
 
             _indexListПройденныхВыражений = new List<int>();
-
-            
+                        
             _view.FormLoad += _view_FormLoad;
-            _view.btnCloseFormClick += _view_btnCloseFormClick;
-            _view.btnMinimizeClick += _view_btnMinimizeClick;
-            _view.btnMaximizeClick += _view_btnMaximizeClick;
+            _view.BtnCloseFormClick += _view_btnCloseFormClick;
+            _view.BtnMinimizeClick += _view_btnMinimizeClick;
+            _view.BtnMaximizeClick += _view_btnMaximizeClick;
 
-            _view.btnAddExpressionClick += _view_btnAddExpressionClick;
-            _view.btnTestEngClick += _view_btnTestEngClick;
-            _view.btnAllExpressionClick += _view_btnAllExpressionClick;
-            _view.btnAlphabetClick += _view_btnAlphabetClick;
-            _view.btnTableTimeClick += _view_btnTableTimeClick;
-            _view.btnUpdateExpressionClick += _view_btnUpdateExpressionClick;
+            _view.BtnAddExpressionClick += _view_btnAddExpressionClick;
+            _view.BtnTestEngClick += _view_btnTestEngClick;
+            _view.BtnAllExpressionClick += _view_btnAllExpressionClick;
+            _view.BtnAlphabetClick += _view_btnAlphabetClick;
+            _view.BtnTableTimeClick += _view_btnTableTimeClick;
+            _view.BtnUpdateExpressionClick += _view_btnUpdateExpressionClick;
 
             _view.DgvRuleCellMouseClick += _view_DgvRuleCellMouseClick;
-            _view.btnBackClick += _view_BtnBackClick;
-            _view.btnSaveClick += _view_btnSaveClick;
+            _view.BtnBackClick += _view_BtnBackClick;
+            _view.BtnSaveClick += _view_btnSaveClick;
                         
-            _view.btnCheckClick += _view_btnCheckClick;            
+            _view.BtnCheckClick += _view_btnCheckClick;            
             _view.EnglishTranslateKeyPress += _view_EnglishTranslateKeyPress;
                                     
-            _view.txtExpEngKeyPress += _view_txtExpEngKeyPress;
-            _view.txtExpRusKeyPress += _view_txtExpRusKeyPress;
-            _view.txtExpEngEnter += _view_txtExpEngEnter;
-            _view.txtExpRusEnter += _view_txtExpRusEnter;
-            _view.txtEnglishTranslateEnter += _view_txtEnglishTranslateEnter;
-            _view.txtExpEngTextChanged += _view_txtExpEngTextChanged;                       
+            _view.TxtExpEngKeyPress += _view_txtExpEngKeyPress;
+            _view.TxtExpRusKeyPress += _view_txtExpRusKeyPress;
+            _view.TxtExpEngEnter += _view_txtExpEngEnter;
+            _view.TxtExpRusEnter += _view_txtExpRusEnter;
+            _view.TxtEnglishTranslateEnter += _view_txtEnglishTranslateEnter;
+            _view.TxtExpEngTextChanged += _view_txtExpEngTextChanged;                       
             
             _view.CmbLessonTestSelectionChangeCommitted += _view_CmbLessonTestSelectionChangeCommitted;
         }
@@ -92,7 +91,7 @@ namespace StudyEnglish.Presenters
 
         private void _view_btnTestEngClick(object sender, EventArgs e)
         {                      
-            очиститьПоляПередТестированием();
+            ОчиститьПоляПередТестированием();
 
             _view.ПоказатьОднуВкладку(2);
             _view.TabControlMainVisible = true;
@@ -102,7 +101,7 @@ namespace StudyEnglish.Presenters
             _listExpression = _model.GetListExpression();
             _view.NumExpression = _listExpression[0].Count;
 
-            viewRandomExpression();
+            ViewRandomExpression();
             
             _view.CmbLessonTestValueMember = "idLesson";
             _view.CmbLessonTestDisplayMember = "Lesson";            
@@ -113,8 +112,8 @@ namespace StudyEnglish.Presenters
 
         private void _view_btnUpdateExpressionClick(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Filter = "Database files(*.mdb)|*.mdb|All files(*.*)|*.*";
+            var openFile = new OpenFileDialog() { Filter = "Database files(*.mdb)|*.mdb|All files(*.*)|*.*" };
+            //openFile.Filter = "Database files(*.mdb)|*.mdb|All files(*.*)|*.*";
 
             try
             {
@@ -202,8 +201,7 @@ namespace StudyEnglish.Presenters
             if (Application.OpenForms.Cast<Form>().Any(f => f.Name == "Alphabet")) return;
             else
             {
-                FormAlphabet frmAlphabet = new FormAlphabet();
-                frmAlphabet.Name = "Alphabet";
+                FormAlphabet frmAlphabet = new FormAlphabet() { Name = "Alphabet" };                
                 frmAlphabet.Show();
             }                
         }
@@ -213,8 +211,7 @@ namespace StudyEnglish.Presenters
             if (Application.OpenForms.Cast<Form>().Any(f => f.Name == "Times")) return;
             else
             {
-                FormTimes frmTimes = new FormTimes();
-                frmTimes.Name = "Times";
+                FormTimes frmTimes = new FormTimes() { Name = "Times" };                
                 frmTimes.Show();
             }
                 
@@ -244,8 +241,7 @@ namespace StudyEnglish.Presenters
                 string[] expressionRussian = _model.RandomExpression(_listExpression).Split(',');
 
                 _indexList = Convert.ToInt32(expressionRussian[0]);
-
-                
+                                
                 if (_indexListПройденныхВыражений.Count == _listExpression[0].Count)
                 {
                     _message.ShowMessage("Тест пройден!");
@@ -257,11 +253,9 @@ namespace StudyEnglish.Presenters
                 }
 
                 if (_indexListПройденныхВыражений.Contains(_indexList)) continue;                              
-                                               
-               
+                                             
                 _view.RussianTest = expressionRussian[1];
                 
-
                 return;
             }
            
@@ -269,7 +263,7 @@ namespace StudyEnglish.Presenters
 
         private void _view_CmbLessonTestSelectionChangeCommitted(object sender, EventArgs e)
         {
-            очиститьПоляПередТестированием();
+            ОчиститьПоляПередТестированием();
                         
             string lesson = _view.CmbLessonTestText;
 
@@ -278,12 +272,12 @@ namespace StudyEnglish.Presenters
             else _listExpression = _model.GetListExpression(lesson);
 
             _view.NumExpression = _listExpression[0].Count;
-            viewRandomExpression();
+            ViewRandomExpression();
         }
 
         
 
-        void viewRandomExpression()
+        private void ViewRandomExpression()
         {
             string[] expressionRussian = _model.RandomExpression(_listExpression).Split(',');
 
@@ -291,7 +285,7 @@ namespace StudyEnglish.Presenters
             _view.RussianTest = expressionRussian[1];
         }
 
-        void очиститьПоляПередТестированием()
+        private void ОчиститьПоляПередТестированием()
         {
             _indexListПройденныхВыражений.Clear();
             _view.NumCorrect = 0;

@@ -10,7 +10,6 @@ D:\WorkFolder\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПР�
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\bin\Debug\StudyEnglish.exe.config
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\bin\Debug\StudyEnglish.exe
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\bin\Debug\StudyEnglish.pdb
-d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.csprojResolveAssemblyReference.cache
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.Properties.Resources.resources
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.csproj.GenerateResource.Cache
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.csproj.CoreCompileInputs.cache
@@ -24,3 +23,4 @@ d:\WorkFolder\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПР�
 d:\WorkFolder\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.Views.FormAlphabet.resources
 d:\WorkFolder\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.Views.FormTimes.resources
 d:\WorkFolder\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.FormMain.resources
+d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Debug\StudyEnglish.csprojAssemblyReference.cache

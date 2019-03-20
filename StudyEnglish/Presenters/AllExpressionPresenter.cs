@@ -15,16 +15,16 @@ namespace StudyEnglish.Presenters
             _model = model;
 
             _view.FormLoad += _view_FormLoad;
-            _view.btnCloseFormClick += _view_btnCloseFormClick;
-            _view.btnMinimizeClick += _view_btnMinimizeClick;
-            _view.btnMaximizeClick += _view_btnMaximizeClick;
+            _view.BtnCloseFormClick += _view_btnCloseFormClick;
+            _view.BtnMinimizeClick += _view_btnMinimizeClick;
+            _view.BtnMaximizeClick += _view_btnMaximizeClick;
         }
 
         private void _view_FormLoad(object sender, System.EventArgs e)
         {
             DataTable tableExpression = _model.GetAllExpression();
             _view.DgvExpressionDataSource = tableExpression;
-            _view.lblCountRec = tableExpression.Rows.Count.ToString();
+            _view.LblCountRec = tableExpression.Rows.Count.ToString();
         }
 
         private void _view_btnMaximizeClick(object sender, System.EventArgs e)

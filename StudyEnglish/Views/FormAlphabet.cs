@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudyEnglish.Views
@@ -17,12 +10,12 @@ namespace StudyEnglish.Views
             InitializeComponent();
         }
 
-        private void btnCloseForm_Click(object sender, EventArgs e)
+        private void BtnCloseForm_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnMaximize_Click(object sender, EventArgs e)
+        private void BtnMaximize_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
             {
@@ -31,7 +24,7 @@ namespace StudyEnglish.Views
             else this.WindowState = FormWindowState.Normal;
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void BtnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }

@@ -60,33 +60,33 @@ namespace StudyEnglish
         void FormSizeDefault();
         void Часики();
         
-        event EventHandler btnAddExpressionClick;
-        event EventHandler btnTestEngClick;        
-        event EventHandler btnAllExpressionClick;                
-        event EventHandler btnAlphabetClick;
-        event EventHandler btnTableTimeClick;
-        event EventHandler btnUpdateExpressionClick;
+        event EventHandler BtnAddExpressionClick;
+        event EventHandler BtnTestEngClick;        
+        event EventHandler BtnAllExpressionClick;                
+        event EventHandler BtnAlphabetClick;
+        event EventHandler BtnTableTimeClick;
+        event EventHandler BtnUpdateExpressionClick;
         
-        event EventHandler btnCloseFormClick;
-        event EventHandler btnMaximizeClick;
-        event EventHandler btnMinimizeClick;
+        event EventHandler BtnCloseFormClick;
+        event EventHandler BtnMaximizeClick;
+        event EventHandler BtnMinimizeClick;
         
         event EventHandler DgvRuleCellMouseClick;
-        event EventHandler btnBackClick;
-        event EventHandler btnSaveClick;
+        event EventHandler BtnBackClick;
+        event EventHandler BtnSaveClick;
         
-        event EventHandler btnCheckClick;
+        event EventHandler BtnCheckClick;
         
 
-        event KeyPressEventHandler txtExpRusKeyPress;
-        event KeyPressEventHandler txtExpEngKeyPress;
+        event KeyPressEventHandler TxtExpRusKeyPress;
+        event KeyPressEventHandler TxtExpEngKeyPress;
         event KeyPressEventHandler EnglishTranslateKeyPress;
 
-        event EventHandler txtExpEngEnter;
-        event EventHandler txtExpRusEnter;
-        event EventHandler txtEnglishTranslateEnter;
+        event EventHandler TxtExpEngEnter;
+        event EventHandler TxtExpRusEnter;
+        event EventHandler TxtEnglishTranslateEnter;
 
-        event EventHandler txtExpEngTextChanged;
+        event EventHandler TxtExpEngTextChanged;
 
         event EventHandler FormLoad;
         event EventHandler CmbLessonTestSelectionChangeCommitted;
@@ -143,108 +143,110 @@ namespace StudyEnglish
 
 
         #region ПробросСобытий  
+        private void FormMain_Load(object sender, EventArgs e)
+        {            
+            FormLoad?.Invoke(this, EventArgs.Empty);
+        }
+
         private void CmbLessonTest_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (CmbLessonTestSelectionChangeCommitted != null) CmbLessonTestSelectionChangeCommitted(this, EventArgs.Empty);
+            //if (CmbLessonTestSelectionChangeCommitted != null) CmbLessonTestSelectionChangeCommitted(this, EventArgs.Empty);
+            CmbLessonTestSelectionChangeCommitted?.Invoke(this, EventArgs.Empty);
         }
 
         private void BtnMaximize_Click(object sender, EventArgs e)
-        {
-            if (btnMaximizeClick != null) btnMaximizeClick(this, EventArgs.Empty);
+        {            
+            BtnMaximizeClick?.Invoke(this, EventArgs.Empty);
         }
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-            if (FormLoad != null) FormLoad(this, EventArgs.Empty);
-        }
-
+        
         private void BtnUpdateExpression_Click(object sender, EventArgs e)
-        {
-            if (btnUpdateExpressionClick != null) btnUpdateExpressionClick(this, EventArgs.Empty);
+        {            
+            BtnUpdateExpressionClick?.Invoke(this, EventArgs.Empty);
         }
 
         private void TxtExpEng_TextChanged(object sender, EventArgs e)
-        {
-            if (txtExpEngTextChanged != null) txtExpEngTextChanged(this, EventArgs.Empty);
+        {            
+            TxtExpEngTextChanged?.Invoke(this, EventArgs.Empty);
         }
 
         private void TxtEnglishTranslate_Enter(object sender, EventArgs e)
-        {
-            if (txtEnglishTranslateEnter != null) txtEnglishTranslateEnter(this, EventArgs.Empty);
+        {            
+            TxtEnglishTranslateEnter?.Invoke(this, EventArgs.Empty);
         }
 
         private void TxtExpRus_Enter(object sender, EventArgs e)
-        {
-            if (txtExpRusEnter != null) txtExpRusEnter(this, EventArgs.Empty);
+        {            
+            TxtExpRusEnter?.Invoke(this, EventArgs.Empty);
         }
 
         private void TxtExpEng_Enter(object sender, EventArgs e)
-        {
-            if (txtExpEngEnter != null) txtExpEngEnter(this, EventArgs.Empty);
+        {            
+            TxtExpEngEnter?.Invoke(this, EventArgs.Empty);
         }
 
         private void TxtExpRus_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (txtExpRusKeyPress != null) txtExpRusKeyPress(this, e);
+        {            
+            TxtExpRusKeyPress?.Invoke(this, e);
         }
         private void TxtExpEng_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (txtExpEngKeyPress != null) txtExpEngKeyPress(this, e);
+        {            
+            TxtExpEngKeyPress?.Invoke(this, e);
         }
         private void BtnAllExpression_Click(object sender, EventArgs e)
-        {
-            if (btnAllExpressionClick != null) btnAllExpressionClick(this, EventArgs.Empty);
+        {            
+            BtnAllExpressionClick?.Invoke(this, EventArgs.Empty);
         }
         private void BtnAlphabet_Click(object sender, EventArgs e)
-        {
-            if (btnAlphabetClick != null) btnAlphabetClick(this, EventArgs.Empty);
+        {            
+            BtnAlphabetClick?.Invoke(this, EventArgs.Empty);
         }
         private void BtnTableTime_Click(object sender, EventArgs e)
         {
-            if (btnTableTimeClick != null) btnTableTimeClick(this, EventArgs.Empty);
+            BtnTableTimeClick?.Invoke(this, EventArgs.Empty);
         }
 
         private void BtnCloseForm_Click(object sender, EventArgs e)
         {
-            if (btnCloseFormClick != null) btnCloseFormClick(this, EventArgs.Empty);
+            BtnCloseFormClick?.Invoke(this, EventArgs.Empty);
         }
 
         private void BtnMinimize_Click(object sender, EventArgs e)
         {
-            if (btnMinimizeClick != null) btnMinimizeClick(this, EventArgs.Empty);
+            BtnMinimizeClick?.Invoke(this, EventArgs.Empty);
         }
 
         private void BtnAddExpression_Click(object sender, EventArgs e)
         {
-            if (btnAddExpressionClick != null) btnAddExpressionClick(this, EventArgs.Empty);
+            BtnAddExpressionClick?.Invoke(this, EventArgs.Empty);
         }
 
         private void DgvRule_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (DgvRuleCellMouseClick != null) DgvRuleCellMouseClick(this, DataGridViewCellMouseEventArgs.Empty);
+            DgvRuleCellMouseClick?.Invoke(this, DataGridViewCellMouseEventArgs.Empty);
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            if (btnBackClick != null) btnBackClick(this, EventArgs.Empty);
+            BtnBackClick?.Invoke(this, EventArgs.Empty);
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (btnSaveClick != null) btnSaveClick(this, EventArgs.Empty);
+            BtnSaveClick?.Invoke(this, EventArgs.Empty);
         }
 
         private void BtnTestEng_Click(object sender, EventArgs e)
         {
-            if (btnTestEngClick != null) btnTestEngClick(this, EventArgs.Empty);
+            BtnTestEngClick?.Invoke(this, EventArgs.Empty);
         }
         private void BtnCheck_Click(object sender, EventArgs e)
         {
-            if (btnCheckClick != null) btnCheckClick(this, EventArgs.Empty);
+            BtnCheckClick?.Invoke(this, EventArgs.Empty);
         }
 
         private void TxtEnglishTranslate_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (EnglishTranslateKeyPress != null) EnglishTranslateKeyPress(this, e);
+            EnglishTranslateKeyPress?.Invoke(this, e);
         }
         #endregion
 
@@ -430,27 +432,27 @@ namespace StudyEnglish
             task.Start();
         }
 
-        public event EventHandler btnCloseFormClick;
-        public event EventHandler btnAddExpressionClick;
+        public event EventHandler BtnCloseFormClick;
+        public event EventHandler BtnAddExpressionClick;
         public event EventHandler DgvRuleCellMouseClick;
-        public event EventHandler btnBackClick;
-        public event EventHandler btnSaveClick;
-        public event EventHandler btnTestEngClick;
-        public event EventHandler btnCheckClick;        
+        public event EventHandler BtnBackClick;
+        public event EventHandler BtnSaveClick;
+        public event EventHandler BtnTestEngClick;
+        public event EventHandler BtnCheckClick;        
         public event KeyPressEventHandler EnglishTranslateKeyPress;
-        public event EventHandler btnMinimizeClick;
-        public event EventHandler btnTableTimeClick;
-        public event EventHandler btnAlphabetClick;
-        public event EventHandler btnAllExpressionClick;
-        public event KeyPressEventHandler txtExpEngKeyPress;
-        public event KeyPressEventHandler txtExpRusKeyPress;
-        public event EventHandler txtExpEngEnter;
-        public event EventHandler txtExpRusEnter;
-        public event EventHandler txtEnglishTranslateEnter;
-        public event EventHandler txtExpEngTextChanged;
-        public event EventHandler btnUpdateExpressionClick;
+        public event EventHandler BtnMinimizeClick;
+        public event EventHandler BtnTableTimeClick;
+        public event EventHandler BtnAlphabetClick;
+        public event EventHandler BtnAllExpressionClick;
+        public event KeyPressEventHandler TxtExpEngKeyPress;
+        public event KeyPressEventHandler TxtExpRusKeyPress;
+        public event EventHandler TxtExpEngEnter;
+        public event EventHandler TxtExpRusEnter;
+        public event EventHandler TxtEnglishTranslateEnter;
+        public event EventHandler TxtExpEngTextChanged;
+        public event EventHandler BtnUpdateExpressionClick;
         public event EventHandler FormLoad;
-        public event EventHandler btnMaximizeClick;
+        public event EventHandler BtnMaximizeClick;
         public event EventHandler CmbLessonTestSelectionChangeCommitted;
 
         #endregion
