@@ -140,7 +140,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StudyEnglish.BL2\StudyEnglish.BL.csproj">
+    <ProjectReference Include="..\StudyEnglish.BL\StudyEnglish.BL.csproj">
       <Project>{f90dd5f0-6c45-47a7-b3eb-8fde7f69caca}</Project>
       <Name>StudyEnglish.BL</Name>
     </ProjectReference>

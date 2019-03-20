@@ -4,7 +4,7 @@ using System.Data.OleDb;
 
 
 
-namespace StudyEnglish
+namespace StudyEnglish.BL
 {
     public class OleDbHelper
     {
