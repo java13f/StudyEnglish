@@ -22,3 +22,7 @@ d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРО�
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Release\StudyEnglish.csproj.CoreCompileInputs.cache
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Release\StudyEnglish.exe
 d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Release\StudyEnglish.pdb
+d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\bin\Release\StudyEnglish.BL.dll
+d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\bin\Release\StudyEnglish.BL.pdb
+d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Release\StudyEnglish.csprojAssemblyReference.cache
+d:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish\obj\Release\StudyEnglish.csproj.CopyComplete

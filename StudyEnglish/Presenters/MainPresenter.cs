@@ -1,6 +1,4 @@
-﻿
-
-using StudyEnglish.BL.Controller;
+﻿using StudyEnglish.BL.Controller;
 using StudyEnglish.Views;
 using System;
 using System.Collections.Generic;

@@ -26,6 +26,10 @@ namespace StudyEnglish.BL.Controller
     {
         private readonly string OleDbConStr;
 
+        /// <summary>
+        /// Интерфейс реализует для добавления нового выражения
+        /// и тестирование
+        /// </summary>        
         #region IEditExpression
         public ExpressionManager(string oleDbConStr)
         {
@@ -147,7 +151,11 @@ namespace StudyEnglish.BL.Controller
         #endregion
 
 
-
+        /// <summary>
+        /// Получение всех выражений
+        /// в планах расширить, реализовать: удаление, редактирование 
+        /// </summary>
+        /// <returns></returns>
         #region IAllExpression
         public DataTable GetAllExpression()
         {
@@ -164,12 +172,7 @@ namespace StudyEnglish.BL.Controller
         }
         #endregion
 
-
-
-
-
-
-
+                                     
 
     }
 }

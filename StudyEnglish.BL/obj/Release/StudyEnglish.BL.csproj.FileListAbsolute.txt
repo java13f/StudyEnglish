@@ -1,0 +1,6 @@
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL\bin\Release\StudyEnglish.BL.dll
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL\bin\Release\StudyEnglish.BL.pdb
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL\obj\Release\StudyEnglish.BL.csprojAssemblyReference.cache
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL\obj\Release\StudyEnglish.BL.csproj.CoreCompileInputs.cache
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL\obj\Release\StudyEnglish.BL.dll
+D:\!!!!!!!E\SYSADMIN\ПРОГРАММИРУЕМ НА С#\C#\Личные ПРОЕКТЫ\StudyEnglish\StudyEnglish.BL\obj\Release\StudyEnglish.BL.pdb
